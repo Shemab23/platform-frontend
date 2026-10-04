@@ -9,7 +9,7 @@ export default function Home() {
       .then(setData)
       .catch((e) => setData({ error: String(e) }));
   }, []);
-
+  //  hello
   return (
     <main className="p-8">
       <h1 className="text-2xl font-bold">Platform</h1>
