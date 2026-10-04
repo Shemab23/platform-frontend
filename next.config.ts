@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination:
-          `${process.env.BACKEND_URL}/api/:path*` || "http://localhost:3001",
+        // Fixed: The || fallback is now inside the variable evaluation block
+        destination: `${process.env.BACKEND_URL || "http://localhost:3001"}/api/:path*`,
       },
     ];
   },
