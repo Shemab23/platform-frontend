@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test:frontend": "playwright test",
-    "test:frontend:ui": "playwright test --ui"
+    "test:frontend:ui": "playwright test --ui",
+    "clean":"git rm -r --cached dist/ .next ",
+     "validate": "npx next typegen && npx tsc --noEmit && playwright test && npm run build"
   },
   "dependencies": {
     "next": "16.3.8",
